@@ -1,6 +1,6 @@
 function isValid(){
   var u = false;
-   do{
+   do{//comprobar que el numero de la tarjeta no tiene espacios vacios
 		var targetNum = prompt('Ingresa el numero de tu Tarjeta');
 		for (i=0;i<targetNum.length;i++){
  		if ( targetNum[i]===' '){
@@ -38,6 +38,23 @@ function isValid(){
         if(correctNum[j]%2!== 0){
         suma += (correctNum[j]);
         }else if (correctNum[j]%2=== 0){
+            if(correctNum[j]*2>=10){
+             //suma+=((correctNum[j]-10)+1)
+            suma+=((correctNum[j]%10)+(parseInt(correctNum[j]/10)));
+            }else{          
+            suma+=(correctNum[j]*2);
+            }
+         }
+         
+    if ((suma % 10) === 0){
+    alert('VALIDA');
+    }else{
+    alert('inVALIDA');
+    break;
+    }
+  }
+}
+isValid()
             if(correctNum[j]*2>=10){
              //suma+=((correctNum[j]-10)+1)
             suma+=((correctNum[j]%10)+(parseInt(correctNum[j]/10)));
