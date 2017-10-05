@@ -25,7 +25,7 @@ for (var i=0;i<correctNum.length; i++) {
       if(correctNum[i]%2!== 0){
        suma += (correctNum[i]);
        }else if (correctNum[i]%2=== 0){
-         if(correctNum[i]*2<=10){
+         if(correctNum[i]*2>=10){
           suma+=((correctNum[i]%10)+(parseInt(correctNum[i]/10)));
            }else{          
             suma+=(correctNum[i]*2);
